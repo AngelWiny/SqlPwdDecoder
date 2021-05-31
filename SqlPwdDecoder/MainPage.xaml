@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SqlPwdDecoder.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Padding="{OnPlatform iOS='0,50'}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Entry
+            x:Name="txtpwd"
+            Grid.Row="0"
+            Grid.Column="0"
+            Placeholder="Contraseña" />
+
+        <Frame
+            Grid.Row="1"
+            Grid.Column="0"
+            Padding="0">
+            <Editor x:Name="txtResult" Placeholder="Resultado" />
+        </Frame>
+
+        <Button
+            x:Name="btnCode"
+            Grid.Row="2"
+            Grid.Column="0"
+            Clicked="btnCode_Clicked"
+            Text="Codificar contraseña" />
+
+        <Button
+            x:Name="btnDecode"
+            Grid.Row="3"
+            Grid.Column="0"
+            Clicked="btnDecode_Clicked"
+            Text="Decodificar contraseña" />
+    </Grid>
+
+
+</ContentPage>
